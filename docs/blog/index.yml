@@ -1,0 +1,13 @@
+pagination: true
+title: "Bloglar"
+description: "Yetim dasturchi tomonidan yozilgan blogpostlar."
+keywords: "dastur, dasturlash, dasturchi, soft, program, til, tili, manuchehr, usmonov, devcon"
+entries:
+  - title: "Psevdo kod (palag'da algoritm) nima va u biz uchun nega kerak?"
+    url: psevdokod.htm
+  - title: "Operatsion tizim nima va u qanday ishlaydi?"
+    url: operatsion_tizim_nima_va_u_qanday_ishlaydi.htm
+  - title: "Umr, asablar, sog'liqdan voz kechishga tayyormisiz? Unda dasturlash sohasiga marhamat"
+    url: umr_asablar_sogliqdan_voz_kechishga_tayyormisiz_unda_dasturlash_sohasiga_marhamat.htm
+  - title: "Frilanser — odam-kompaniya"
+    url: frilanser_odam_kompaniya.htm

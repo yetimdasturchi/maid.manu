@@ -1,0 +1,27 @@
+title: "Yetim dasturchi kundaligi"
+description: "Yetim dasturchi kundaligi."
+keywords: "dastur, dasturlash, dasturchi, soft, program, til, tili, manuchehr, usmonov, devcon"
+entries:
+    - title: ma'lumotnoma
+      url: about.htm
+    - title: qo'llanmalar
+      entries:
+        - post_list: guides
+          limit: 5
+          show_more: true
+          show_more_text: barchasi...
+          show_more_url: guides
+    - title: izohli lug'at
+      url: dictionary
+    - title: blog
+      entries:
+        - post_list: blog
+          limit: 5
+          order: random
+          show_more: true
+          show_more_text: ko'proq...
+          show_more_url: blog
+    - title: foydalanish shartlari
+      url: rules.htm
+    - title: aloqa
+      url: contact.htm
