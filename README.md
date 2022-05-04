@@ -2,6 +2,18 @@
 # Yetim dasturchi kundaligi
 O'zbek internet segmentida online hujjatlar va shaxsiy blogni rivojlantirishga qaratilgan stsenariy.
 
+## Mundarija
+- [Xususiyatlar](#xususiyatlar)
+- [Demonstratsiya](#demonstratsiya)
+- [O'rnatish](#o-rnatish)
+  * [Talablar](#talablar)
+- [Foydalanish](#foydalanish)
+  * [Jildlarni sozlash](#jildlarni-sozlash)
+  * [Markdown fayllar](#markdown-fayllar)
+- [Sozlamalar](#sozlamalar)
+- [Kodlarni tahrirlash](#kodlarni-tahrirlash)
+- [Litsenziya](#litsenziya)
+
 ## Xususiyatlar
 - Tezkorlik
 - Optimallashtirilgan seo
