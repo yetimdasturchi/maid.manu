@@ -3,6 +3,12 @@ title: "Bloglar"
 description: "Yetim dasturchi tomonidan yozilgan blogpostlar."
 keywords: "dastur, dasturlash, dasturchi, soft, program, til, tili, manuchehr, usmonov, devcon"
 entries:
+  - title: "Datalife engine postlarini mamlakatlar bo'yicha boshqarish"
+    url: datalife-engine-postlarini-mamlakatlar-boyicha-boshqarish.htm
+  - title: "Bo'lajak dasturchilar uchun tavsiyalar"
+    url: bolajak-dasturchilar-uchun-tavsiyalar.htm
+  - title: "Dasturchiga matematikadan ko'ra mantiq ko'proq kerakmi?"
+    url: dasturchiga-matematikadan-kora-mantiq-koproq-kerakmi.htm
   - title: "Psevdo kod (palag'da algoritm) nima va u biz uchun nega kerak?"
     url: psevdokod.htm
   - title: "Operatsion tizim nima va u qanday ishlaydi?"

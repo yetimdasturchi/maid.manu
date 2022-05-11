@@ -2,6 +2,7 @@
 
 $config['base_url'] = '';
 $config['docs_path'] = '/home/docs/';
+$config['contents_url'] = 'https://contents.manu.uno/';
 
 $config['md']['auto_embed'] = TRUE;
 $config['md']['embed_width'] = 800;

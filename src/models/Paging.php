@@ -43,7 +43,6 @@ class Paging {
                 }
             }
         }
-
         $this->_checkDefaultTag();
     }
 
@@ -64,6 +63,10 @@ class Paging {
 
         $link = $this->full_tag;
 
+        $ends_count = 1; 
+        $middle_count = 1;
+        $dots = false;
+
         if($this->current_page == 1)
         {
             //$link .= $this->disabled_tag.'<a href="#">&laquo;</a>'.$this->disabled_tag_close;
@@ -73,7 +76,7 @@ class Paging {
             $link .= $this->num_tag.'<a href="'.$this->base_url.$page_op.'page='.($this->current_page - 1).'" title="Avvalgi sahifa">&laquo;</a>'.$this->num_tag_close;
         }
 
-        for($a=1; $a<=$this->total_page; $a++)
+        /*for($a=1; $a<=$this->total_page; $a++)
         {
             $open = $this->num_tag;
             $close = $this->num_tag_close;
@@ -83,6 +86,23 @@ class Paging {
                 $close = $this->active_tag_close;
             }
             $link .= $open.'<a href="'.$this->base_url.$page_op.'page='.$a.'" title="'.$a.'-sahifa">'.$a.'</a>'.$close;
+        }
+        */
+        for($a=1; $a<=$this->total_page; $a++) {
+            $open = $this->num_tag;
+            $close = $this->num_tag_close;
+            if ($a == $this->current_page) {
+                $link .= $this->active_tag.'<a href="'.$this->base_url.$page_op.'page='.$a.'" title="'.$a.'-sahifa">'.$a.'</a>'.$this->active_tag_close;
+                $dots = true;
+            }else{
+                if ($a <= $ends_count || ($this->current_page && $a >= $this->current_page - $middle_count && $a <= $this->current_page + $middle_count) || $a > $this->total_page - $ends_count) { 
+                    $link .= $open.'<a href="'.$this->base_url.$page_op.'page='.$a.'" title="'.$a.'-sahifa">'.$a.'</a>'.$close;
+                $dots = true;
+            }elseif ($dots) {
+                $link .= $this->active_tag."<span class=\"nav_ext\">...</span>".$this->active_tag_close;
+                    $dots = false;
+                }
+            }
         }
 
         if($this->current_page == $this->total_page)

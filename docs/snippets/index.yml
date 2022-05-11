@@ -1,0 +1,10 @@
+title: "kod parchalari"
+description: "Yetim dasturchi tomonidan yozilgan kod parchalari."
+keywords: "parcha, snippets, code, kod, soft, program, til, tili, manuchehr, usmonov, devcon"
+entries:
+  - title: "Javascriptda minimal router"
+    after: "( html, js )"
+    url: javascript-router.htm
+  - title: "Linux foydalanuvchi interfeysida sichqoncha g'ildiragi tezligi (scroll speed) ni sozlash."
+    after: "( bash )"
+    url: gildirak.htm

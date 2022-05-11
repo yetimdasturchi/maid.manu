@@ -1,7 +1,9 @@
 <?php
-define( 'ENVIRONMENT' , isset( $_SERVER['APP_ENV'] ) ? $_SERVER['APP_ENV'] : 'development' );
+header("Content-Type: text/html; charset=UTF-8");
 
-const APP_VERSION = '0.1.1';
+define( 'ENVIRONMENT' , isset( $_SERVER['APP_ENV'] ) ? $_SERVER['APP_ENV'] : 'production' );
+
+const APP_VERSION = '0.1.9';
 
 switch ( ENVIRONMENT )
 {

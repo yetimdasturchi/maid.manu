@@ -34,7 +34,7 @@ function build_menu($yaml='', $str=FALSE)
 				if ( !empty( $item['url'] ) ) {
 					if ( !filter_var($item['url'], FILTER_VALIDATE_URL) ) {
 						if ( mb_substr($item['url'], 0, 1) == '/' ) {
-							$item['url'] = base_url( $item['url'] );
+							$item['url'] = base_url( ltrim($item['url'], '/') );
 						}else{
 							$item['url'] = rtrim(current_url(), '/') . '/' . $item['url'];
 						}

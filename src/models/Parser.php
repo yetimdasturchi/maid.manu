@@ -9,7 +9,7 @@ use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 
 use League\CommonMark\Extension\FrontMatter\FrontMatterExtension;
 use League\CommonMark\Extension\FrontMatter\Output\RenderedContentWithFrontMatter;
-
+use League\CommonMark\Extension\DescriptionList\DescriptionListExtension;
 use League\CommonMark\Extension\Table\TableExtension;
 
 use League\CommonMark\Extension\Strikethrough\StrikethroughExtension;
@@ -51,13 +51,14 @@ class Md {
 	}
 	
 	public function get( $md ){
+		$md = preg_replace('/{contents_url="(.+)"}/', config_item('contents_url')."$1", $md);
 		$this->config['html_input'] = 'escape';
 		
 		$this->config['table'] = [
 			'wrap' => [
-                'enabled' => false,
+                'enabled' => true,
                 'tag' => 'div',
-            	'attributes' => [],
+            	'attributes' => ['class' => 'table-responsive'],
         	]
         ];
 
@@ -127,7 +128,7 @@ class Md {
 		$environment = new Environment( $this->config );
 		
 		$environment->addExtension(new CommonMarkCoreExtension());
-
+		$environment->addExtension(new DescriptionListExtension());
 		$environment->addExtension(new FrontMatterExtension());
         $environment->addExtension(new TableExtension());
         $environment->addExtension(new StrikethroughExtension());

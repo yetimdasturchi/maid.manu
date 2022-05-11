@@ -289,6 +289,10 @@ table {
   width: 100%
 }
 
+.table-responsive{
+  overflow-x:auto;
+}
+
 table,
 th,
 td {
@@ -354,4 +358,9 @@ mark{
 
 .pagination li.active a{
   color: black;
+}
+input[type="search"]{
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
 }

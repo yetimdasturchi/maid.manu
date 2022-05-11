@@ -3,9 +3,5 @@ title: "Qo'llanmalar"
 description: "Yetim dasturchi tomonidan yozilgan qo'llanmalar."
 keywords: "dastur, dasturlash, dasturchi, soft, program, til, tili, manuchehr, usmonov, devcon"
 entries:
-  - title: markdown
-    url: markdown
-  - title: reStructuredText
-    url: rst
-  - title: http
-    url: http
+  - title: Kompyuter asoslari
+    url: kompyuter-asoslari

@@ -45,48 +45,48 @@ function set_status_header($code = 200, $text = '') {
 	if (empty($text)) {
 		is_int($code) OR $code = (int) $code;
 		$stati = [
-			100	=> 'Continue',
-			101	=> 'Switching Protocols',
+			100	=> 'Davom etish',
+			101	=> 'Protokollarni almashtirish',
 
 			200	=> 'OK',
-			201	=> 'Created',
-			202	=> 'Accepted',
-			203	=> 'Non-Authoritative Information',
-			204	=> 'No Content',
-			205	=> 'Reset Content',
-			206	=> 'Partial Content',
+			201	=> 'Yaratildi',
+			202	=> 'Qabul qilindi',
+			203	=> 'Vakolatli bo\'lmagan ma\'lumot',
+			204	=> 'Kontent mavjud emas',
+			205	=> 'Kontentni tiklash',
+			206	=> 'Qisman tarkib',
 
-			300	=> 'Multiple Choices',
-			301	=> 'Moved Permanently',
-			302	=> 'Found',
-			303	=> 'See Other',
-			304	=> 'Not Modified',
-			305	=> 'Use Proxy',
-			307	=> 'Temporary Redirect',
+			300	=> 'Bir nechta tanlov',
+			301	=> 'Doimiy ko\'chirildi',
+			302	=> 'Topildi',
+			303	=> 'B.qga qarang',
+			304	=> 'Oʻzgartirilmagan',
+			305	=> 'Proksi-serverdan foydalaning',
+			307	=> 'Vaqtinchalik qayta yo\'naltirish',
 
-			400	=> 'Bad Request',
-			401	=> 'Unauthorized',
-			402	=> 'Payment Required',
-			403	=> 'Forbidden',
-			404	=> 'Not Found',
-			405	=> 'Method Not Allowed',
-			406	=> 'Not Acceptable',
-			407	=> 'Proxy Authentication Required',
-			408	=> 'Request Timeout',
-			409	=> 'Conflict',
-			410	=> 'Gone',
-			411	=> 'Length Required',
-			412	=> 'Precondition Failed',
-			413	=> 'Request Entity Too Large',
-			414	=> 'Request-URI Too Long',
-			415	=> 'Unsupported Media Type',
-			416	=> 'Requested Range Not Satisfiable',
-			417	=> 'Expectation Failed',
-			422	=> 'Unprocessable Entity',
-			426	=> 'Upgrade Required',
-			428	=> 'Precondition Required',
-			429	=> 'Too Many Requests',
-			431	=> 'Request Header Fields Too Large',
+			400	=> 'Noto\'g\'ri so\'rov',
+			401	=> 'Ruxsat berilmagan',
+			402	=> 'To\'lov talab qilinadi',
+			403	=> 'Taqiqlangan',
+			404	=> 'Mavjud emas',
+			405	=> 'Ruxsat berilmagan usul',
+			406	=> 'Qabul qilinmaydi',
+			407	=> 'So\'rovni kutish vaqti tugashi',
+			408	=> 'So\'rov muddati',
+			409	=> 'Ziddiyat',
+			410	=> 'Resurs mavjud emas',
+			411	=> 'Uzunlik talab qilinadi',
+			412	=> 'Old shart amalga oshmadi',
+			413	=> 'So\'rov ob\'ekti juda katta',
+			414	=> 'URI soʻrovi juda uzun',
+			415	=> 'Qo\'llab-quvvatlanmaydigan media turi',
+			416	=> 'So\'ralgan diapazon qoniqtirilmaydi',
+			417	=> 'Kutish amalga oshmadi',
+			422	=> 'Ishlov berilmaydigan ob\'ekt',
+			426	=> 'Yangilash talab qilinadi',
+			428	=> 'Old shart talab qilinadi',
+			429	=> 'Juda koʻp soʻrovlar',
+			431	=> 'Soʻrov sarlavhasi maydonlari juda katta',
 
 			500	=> 'Serverdagi ichki xatolik',
 			501	=> 'Amalga oshirilmagan',
@@ -115,7 +115,7 @@ function set_status_header($code = 200, $text = '') {
 }
 
 
-function show_error($message, $status_code = 500, $heading = 'An Error Was Encountered') {
+function show_error($message, $status_code = 500, $heading = 'Xatolik yuzaga keldi') {
 	$status_code = abs($status_code);
 	if ($status_code < 100) {
 		$exit_status = $status_code + 9;
@@ -150,14 +150,14 @@ function levels_code( $level, $severity ) {
 		E_WARNING			=>	'Ogohlantirish',
 		E_PARSE				=>	'Tahliliy xatolik',
 		E_NOTICE			=>	'Eslatma',
-		E_CORE_ERROR		=>	'Core Error',
-		E_CORE_WARNING		=>	'Core Warning',
-		E_COMPILE_ERROR		=>	'Compile Error',
-		E_COMPILE_WARNING	=>	'Compile Warning',
-		E_USER_ERROR		=>	'User Error',
-		E_USER_WARNING		=>	'User Warning',
-		E_USER_NOTICE		=>	'User Notice',
-		E_STRICT			=>	'Runtime Notice'
+		E_CORE_ERROR		=>	'Asosiy xatolik',
+		E_CORE_WARNING		=>	'Asosiy ogohlantirish',
+		E_COMPILE_ERROR		=>	'Kompilyatsiya xatosi',
+		E_COMPILE_WARNING	=>	'Kompilyatsiya ogohlantirishi',
+		E_USER_ERROR		=>	'Foydalanuvchi xatosi',
+		E_USER_WARNING		=>	'Foydalanuvchi ogohlantirishi',
+		E_USER_NOTICE		=>	'Foydalanuvchi eslatmasi',
+		E_STRICT			=>	'Ish jarayoni bildirishnoma'
 	];
 
 	return ( isset( $levels[ $level ] ) ) ? $levels[ $level ] : $severity;

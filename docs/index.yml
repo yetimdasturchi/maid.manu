@@ -4,24 +4,34 @@ keywords: "dastur, dasturlash, dasturchi, soft, program, til, tili, manuchehr, u
 entries:
     - title: ma'lumotnoma
       url: about.htm
+    - title: izlash
+      url: search
     - title: qo'llanmalar
       entries:
         - post_list: guides
-          limit: 5
+          limit: 3
           show_more: true
           show_more_text: barchasi...
           show_more_url: guides
+    - title: kod parchalari
+      url: snippets
     - title: izohli lug'at
-      url: dictionary
+      entries:
+        - post_list: dictionary
+          order: random
+          limit: 3
+          show_more: true
+          show_more_text: barchasi...
+          show_more_url: dictionary
     - title: blog
       entries:
         - post_list: blog
-          limit: 5
-          order: random
+          limit: 3
+          order: asc
           show_more: true
           show_more_text: ko'proq...
           show_more_url: blog
-    - title: foydalanish shartlari
-      url: rules.htm
+    - title: loyihani qo'llab quvvatlash
+      url: donate.htm
     - title: aloqa
       url: contact.htm

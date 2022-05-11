@@ -95,6 +95,9 @@
 })();
 
 var fetchBody = function( url ) {
+	if (url.indexOf('#') > -1) {
+		return;
+	}
 	fetch( url ).then(function (response) {
 		return response.text();
 	}).then(function (html) {
@@ -103,6 +106,7 @@ var fetchBody = function( url ) {
 		document.title = title;
 		document.body.innerHTML = body;
 		history.pushState({page:url}, null, url);
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 		running();
 	}).catch(function (err) {
 		new Toast({
@@ -119,12 +123,20 @@ function running() {
 	var Anchors = document.getElementsByTagName("a");
 	for (var i = 0; i < Anchors.length ; i++) {
 		let hostname = new URL(Anchors[i].href);
-		if (hostname.host == window.location.host) {
+		if (hostname.host == window.location.host && Anchors[i].href.indexOf('#') < 0) {
 			Anchors[i].addEventListener("click", function (event) {
 				fetchBody(this.href);
 				event.preventDefault();
 			}, false);
 		}
+	}
+	if (document.getElementById('searchform') != null) {
+		document.getElementById('searchform').addEventListener('submit', function(event) {
+			let term = document.getElementById('searchterm').value;
+			let url = '/search?term=' + encodeURI(term);
+			fetchBody( url );
+			event.preventDefault();
+		});
 	}
 	hljs.highlightAll();
 }
