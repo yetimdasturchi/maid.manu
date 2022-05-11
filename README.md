@@ -19,6 +19,7 @@ O'zbek internet segmentida online hujjatlar va shaxsiy blogni rivojlantirishga q
 - Optimallashtirilgan seo
 - Qulaylik, hujjatlar va jildlar bilan avtonom ishlay olish
 - Avtomatik sahifalarni generatsiya qilish
+- Hujjatlar kontentidan aqlli izlash
 
 ## Demonstratsiya
 
